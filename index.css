@@ -7,8 +7,8 @@ head {
 	align-content: center;
 }
  model-viewer{
-  	width: 400px;
-  	height: 600px;
+  	width: 100vw;
+  	height: 100vh;
   	margin: 0 auto;
   }
 body {
