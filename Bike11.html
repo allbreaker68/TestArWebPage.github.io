@@ -48,9 +48,17 @@ else
 </script>
   <iframe id="download_iframe" style="display:none;"></iframe>
 -->
-  <model-viewer  src="Assets/BMW AR/GLTF/T1_S1/BMW Bike.gltf" ios-src="Assets/Asics_Gel_Nimbus_21.usdz" magic-leap ar  camera-controls activateAR()> 
+  <model-viewer  src="Assets/BMW AR/GLTF/T1_S1/BMW Bike.gltf" ios-src="Assets/Asics_Gel_Nimbus_21.usdz" magic-leap ar  camera-controls > 
+  	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js" >
+  		function LoadAR()
+  		{
+  			activateAR();
+  		}
+  		 LoadAR();
 
+  	</script>
   </model-viewer>
+
 
 </section>
 
