@@ -12,6 +12,7 @@ head {
   	margin: 0 auto;
   }
 body {
+	position:fixed;
 	background-color: transparent;
 	text-decoration-color: black;
 	font-family: 'Raleway', sans-serif;
