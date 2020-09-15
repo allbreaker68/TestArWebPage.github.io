@@ -3,7 +3,8 @@
 <head>
 <link rel="stylesheet" type="text/css" href="index.css">
 <!-- Import the component -->
-<meta charset="UFT-8">
+<meta charset="UFT-8" />
+<meta http-equiv=”Content-Type” content=”text/html; charset=utf-8″ />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
@@ -16,48 +17,23 @@
 
    	<section>
   <!--<model-viewer src="Assets/HTC_Vive_Headset.gltf" ios-src="Assets/HTC_Vive_Headset.usdz" magic-leap ar camera-controls></model-viewer>-->
-<!--   <script>
-function DownloadIOS() {
-    document.getElementById('download_iframe').ios-src="Assets/Asics_Gel_Nimbus_21.usdz";
-};
-function DownloadAndroidPC() {
-    document.getElementById('download_iframe').src="Assets/BMW AR/GLTF/T1_S1/BMW Bike.gltf";
-};
-function iOS() {
-  return [
-    'iPad Simulator',
-    'iPhone Simulator',
-    'iPod Simulator',
-    'iPad',
-    'iPhone',
-    'iPod'
-  ].includes(navigator.platform)
-  // iPad on iOS 13 detection
-  || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
-}
-if (iOS)
-{
-   DownloadIOS();
-}
-else 
-{
-   DownloadAndroidPC();
-}
-
-
-</script>
-  <iframe id="download_iframe" style="display:none;"></iframe>
--->
-  <model-viewer  src="Assets/BMW AR/GLTF/T1_S1/BMW Bike.gltf" ios-src="Assets/BMW AR/USDZ/BMWBike_T1_S1.usdz" magic-leap ar  camera-controls ar-modes="quick-look" > 
+  <model-viewer  src="Assets/BMW AR/GLTF/T1_S1/BMW Bike.gltf" ios-src="Assets/BMW AR/USDZ/BMWBike_T1_S1.usdz" magic-leap ar  camera-controls ar-modes="webxr scene-viewer quick-look"  > 
   </model-viewer>
-	<!--<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js" >
-  		function LoadAR()
-  		{
-  			activateAR();
-  		}
-  		 LoadAR();
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+  	if (document.querySelector("#model-viewer") !== null) {
+  // Ahora sabemos que foo está definido, ahora podemos continuar.
+  document.querySelector("#model-viewer").addEventListener('ar-status', (event) => {
+    
+    if(event.detail.status === 'session-started')
+    {
+    	activateAR();
+    }
+  });
+}
 
-  	</script>-->
+  
+</script>
+
 
 </section>
 
