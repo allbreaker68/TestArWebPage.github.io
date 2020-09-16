@@ -14,12 +14,7 @@ head {
   	margin: 0 auto;
 
   }
-  #defalut-ar-button 
-  {
-  	position: absolute;
-  	bottom: 50vw;
-  	top: 50vh;
-  }
+  
 body {
 	position:fixed;
 	background-color: transparent;
