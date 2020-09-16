@@ -1,0 +1,160 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 227196,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 43863,
+      "max": [
+        6.48879718780518,
+        12.2023468017578,
+        5.22739791870117
+      ],
+      "min": [
+        -6.48879480361938,
+        -0.343322277069092,
+        -5.22739553451538
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 43863,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 43863,
+      "type": "VEC2"
+    }
+  ],
+  "asset": {
+    "generator": "Substance Painter 6.2.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 908784,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 526356,
+      "byteOffset": 908784,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 526356,
+      "byteOffset": 1435140,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 350904,
+      "byteOffset": 1961496,
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 2312400,
+      "uri": "Kiwano.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "blinn1_baseColor.png"
+    },
+    {
+      "uri": "blinn1_occlusionRoughnessMetallic.png"
+    }
+  ],
+  "materials": [
+    {
+      "alphaMode": "OPAQUE",
+      "name": "blinn1",
+      "occlusionTexture": {
+        "index": 1
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicRoughnessTexture": {
+          "index": 1
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Kiwano1:Mesh",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 2,
+            "POSITION": 1,
+            "TEXCOORD_0": 3
+          },
+          "indices": 0,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        2
+      ],
+      "name": "Kiwano1:Mesh"
+    },
+    {
+      "mesh": 0,
+      "name": "Kiwano1:Mesh"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9985,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    }
+  ]
+}
