@@ -26,7 +26,13 @@ body {
 	overflow-x: hidden;
 	padding: 0px;
 }
-
+#default-ar-button{
+	position: :absolute;
+	bottom: 16px;
+	right: 16px;
+	transform: scale(var(--ar-button-scale,1));
+	transform-origin: top-left;
+}
 h1,
 h2,
 h3,
