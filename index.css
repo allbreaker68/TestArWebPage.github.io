@@ -12,7 +12,12 @@ head {
   	/* mobile viewport bug fix */
     min-height: -webkit-fill-available;
   	margin: 0 auto;
+  	position:fixed;
 
+  }
+  section
+  {
+      position:fixed;
   }
   
 body {
