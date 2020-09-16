@@ -1,0 +1,160 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 205182,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 44892,
+      "max": [
+        14.1211919784546,
+        42.379753112793,
+        16.7901573181152
+      ],
+      "min": [
+        -13.1563940048218,
+        0.471784591674805,
+        -15.2156715393066
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 44892,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 44892,
+      "type": "VEC2"
+    }
+  ],
+  "asset": {
+    "generator": "Substance Painter 6.2.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 820728,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 538704,
+      "byteOffset": 820728,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 538704,
+      "byteOffset": 1359432,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 359136,
+      "byteOffset": 1898136,
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 2257272,
+      "uri": "Hershel_little-america.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "MAt_Hershel_little_america_baseColor.png"
+    },
+    {
+      "uri": "MAt_Hershel_little_america_occlusionRoughnessMetallic.png"
+    }
+  ],
+  "materials": [
+    {
+      "alphaMode": "OPAQUE",
+      "name": "MAt_Hershel_little_america",
+      "occlusionTexture": {
+        "index": 1
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicRoughnessTexture": {
+          "index": 1
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Hershel_little_america",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 2,
+            "POSITION": 1,
+            "TEXCOORD_0": 3
+          },
+          "indices": 0,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        2
+      ],
+      "name": "Hershel_little_america"
+    },
+    {
+      "mesh": 0,
+      "name": "Hershel_little_america"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9985,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    }
+  ]
+}
