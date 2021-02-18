@@ -1,0 +1,185 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 593610,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 108782,
+      "max": [
+        18.7532024383545,
+        2.37471771240234,
+        14.5045394897461
+      ],
+      "min": [
+        -12.7529602050781,
+        -0.02020263671875,
+        -6.666259765625
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 108782,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 108782,
+      "type": "VEC2"
+    }
+  ],
+  "asset": {
+    "generator": "Substance Painter 6.2.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 2374440,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1305384,
+      "byteOffset": 2374440,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1305384,
+      "byteOffset": 3679824,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 870256,
+      "byteOffset": 4985208,
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 5855464,
+      "uri": "Sub_BilleteraRosa.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "MAT_BilleteraRosa_baseColor.png"
+    },
+    {
+      "uri": "MAT_BilleteraRosa_occlusionRoughnessMetallic.png"
+    },
+    {
+      "uri": "MAT_BilleteraRosa_normal.png"
+    },
+    {
+      "uri": "MAT_BilleteraRosa_emissive.png"
+    }
+  ],
+  "materials": [
+    {
+      "alphaMode": "OPAQUE",
+      "emissiveFactor": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emissiveTexture": {
+        "index": 3
+      },
+      "name": "MAT_BilleteraRosa",
+      "normalTexture": {
+        "index": 2
+      },
+      "occlusionTexture": {
+        "index": 1
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicRoughnessTexture": {
+          "index": 1
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "MDL_BilleteraRosa",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 2,
+            "POSITION": 1,
+            "TEXCOORD_0": 3
+          },
+          "indices": 0,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        2
+      ],
+      "name": "MDL_BilleteraRosa"
+    },
+    {
+      "mesh": 0,
+      "name": "MDL_BilleteraRosa"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9985,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    },
+    {
+      "sampler": 0,
+      "source": 3
+    }
+  ]
+}

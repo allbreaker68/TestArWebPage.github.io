@@ -1,0 +1,185 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 30000,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 5523,
+      "max": [
+        1.79656600952148,
+        3.59064912796021,
+        1.33458709716797
+      ],
+      "min": [
+        -1.94078063964844,
+        -0.0198671817779541,
+        -2.09354591369629
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 5523,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 5523,
+      "type": "VEC2"
+    }
+  ],
+  "asset": {
+    "generator": "Substance Painter 6.2.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 120000,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 66276,
+      "byteOffset": 120000,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 66276,
+      "byteOffset": 186276,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 44184,
+      "byteOffset": 252552,
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 296736,
+      "uri": "Sub_Coso.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "material_0_baseColor.png"
+    },
+    {
+      "uri": "material_0_occlusionRoughnessMetallic.png"
+    },
+    {
+      "uri": "material_0_normal.png"
+    },
+    {
+      "uri": "material_0_emissive.png"
+    }
+  ],
+  "materials": [
+    {
+      "alphaMode": "OPAQUE",
+      "emissiveFactor": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emissiveTexture": {
+        "index": 3
+      },
+      "name": "material_0",
+      "normalTexture": {
+        "index": 2
+      },
+      "occlusionTexture": {
+        "index": 1
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicRoughnessTexture": {
+          "index": 1
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Coso_Mesh",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 2,
+            "POSITION": 1,
+            "TEXCOORD_0": 3
+          },
+          "indices": 0,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        2
+      ],
+      "name": "Coso_Mesh"
+    },
+    {
+      "mesh": 0,
+      "name": "Coso_Mesh"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9985,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    },
+    {
+      "sampler": 0,
+      "source": 3
+    }
+  ]
+}
