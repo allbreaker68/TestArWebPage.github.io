@@ -9,29 +9,29 @@
     {
       "bufferView": 1,
       "componentType": 5126,
-      "count": 56896,
+      "count": 56898,
       "max": [
-        22.6763935089111,
+        22.6217460632324,
         35.5409698486328,
-        14.4466257095337
+        16.754810333252
       ],
       "min": [
-        -22.6696891784668,
+        -22.7243347167969,
         -0.114889144897461,
-        -16.7548122406006
+        -14.4466257095337
       ],
       "type": "VEC3"
     },
     {
       "bufferView": 2,
       "componentType": 5126,
-      "count": 56896,
+      "count": 56898,
       "type": "VEC3"
     },
     {
       "bufferView": 3,
       "componentType": 5126,
-      "count": 56896,
+      "count": 56898,
       "type": "VEC2"
     }
   ],
@@ -47,26 +47,26 @@
     },
     {
       "buffer": 0,
-      "byteLength": 682752,
+      "byteLength": 682776,
       "byteOffset": 1013124,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 682752,
-      "byteOffset": 1695876,
+      "byteLength": 682776,
+      "byteOffset": 1695900,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 455168,
-      "byteOffset": 2378628,
+      "byteLength": 455184,
+      "byteOffset": 2378676,
       "target": 34962
     }
   ],
   "buffers": [
     {
-      "byteLength": 2833796,
+      "byteLength": 2833860,
       "uri": "Sub_Cojin.bin"
     }
   ],
