@@ -1,0 +1,170 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 284619,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 58040,
+      "max": [
+        30.7791748046875,
+        80.802490234375,
+        25.4227752685547
+      ],
+      "min": [
+        -30.779541015625,
+        -0.1431884765625,
+        -25.3862762451172
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 58040,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 58040,
+      "type": "VEC2"
+    }
+  ],
+  "asset": {
+    "generator": "Substance Painter 6.2.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 1138476,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 696480,
+      "byteOffset": 1138476,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 696480,
+      "byteOffset": 1834956,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 464320,
+      "byteOffset": 2531436,
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 2995756,
+      "uri": "Sub_Silla.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "MAT_Silla_baseColor.png"
+    },
+    {
+      "uri": "MAT_Silla_occlusionRoughnessMetallic.png"
+    },
+    {
+      "uri": "MAT_Silla_normal.png"
+    }
+  ],
+  "materials": [
+    {
+      "alphaMode": "OPAQUE",
+      "name": "MAT_Silla",
+      "normalTexture": {
+        "index": 2
+      },
+      "occlusionTexture": {
+        "index": 1
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicRoughnessTexture": {
+          "index": 1
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "MDL_Silla",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 2,
+            "POSITION": 1,
+            "TEXCOORD_0": 3
+          },
+          "indices": 0,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        2
+      ],
+      "name": "MDL_Silla"
+    },
+    {
+      "mesh": 0,
+      "name": "MDL_Silla"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9985,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    }
+  ]
+}
