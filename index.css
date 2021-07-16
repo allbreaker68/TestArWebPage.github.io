@@ -7,6 +7,7 @@ head {
 	align-content: center;
 }
  model-viewer{
+ 
   	width: 100vw;
   	height: 100vh;
   	/* mobile viewport bug fix */
