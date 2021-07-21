@@ -1,0 +1,10 @@
+RewriteEngine on
+RewriteCond %{HTTP_REFERER} !^http://my.domain.com/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.my.domain.com/.*$ [NC]
+RewriteRule .(gltf|gbl|usdz)$ - [F]`
+<Files "reminder.php">
+        Order Deny,Allow
+        Deny from all
+        Allow from http://my.domain.com/
+        Allow from http://my.domain.com/
+</Files>
