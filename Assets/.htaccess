@@ -5,6 +5,6 @@ RewriteRule ^.* - [F,L]
 <Files "reminder.php">
         Order Deny,Allow
         Deny from all
-        Allow from http://ar.allbreaker.co/Assets/
+        Allow from http://ar.allbreaker.co/
         Allow from http://ar.allbreaker.co/
 </Files>
