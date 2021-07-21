@@ -1,10 +1,10 @@
-RewriteEngine on
-RewriteCond %{HTTP_REFERER} !^http://my.domain.com/.*$ [NC]
-RewriteCond %{HTTP_REFERER} !^http://www.my.domain.com/.*$ [NC]
-RewriteRule .(gltf|gbl|usdz)$ - [F]`
+RewriteEngine On
+RewriteCond %{REQUEST_URI} \.(gltf|gbl|usdz)$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://ar.allbreaker.co/.*$ [NC]
+RewriteRule ^.* - [F,L]
 <Files "reminder.php">
         Order Deny,Allow
         Deny from all
-        Allow from http://my.domain.com/
-        Allow from http://my.domain.com/
+        Allow from http://ar.allbreaker.co/Assets/
+        Allow from http://ar.allbreaker.co/
 </Files>
