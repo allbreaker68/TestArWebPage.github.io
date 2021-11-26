@@ -36,10 +36,10 @@
    "src": "misc/icon64.png"
   }
  ],
+ "name": "Museo_FAC_360",
  "background_color": "#FFFFFF",
- "name": "Demo_Museo_FAC",
- "theme_color": "#FFFFFF",
+ "description": "Develop",
  "display": "fullscreen",
  "start_url": "index.htm",
- "description": "Demo"
+ "theme_color": "#FFFFFF"
 }
