@@ -1,6 +1,7 @@
 {
- "name": "Museo_FAC_360 (Duplicado)",
  "start_url": "index.html",
+ "name": "Museo_FAC_360 (Duplicado)",
+ "theme_color": "#000000",
  "description": "Develop",
  "display": "fullscreen",
  "background_color": "#000000",
@@ -40,6 +41,5 @@
    "type": "image/png",
    "src": "misc/icon64.png"
   }
- ],
- "theme_color": "#000000"
+ ]
 }
