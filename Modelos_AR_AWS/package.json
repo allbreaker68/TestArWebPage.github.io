@@ -1,0 +1,17 @@
+{
+  "name": "modelos_ar_aws",
+  "version": "1.0.0",
+  "description": "pagina_web_AR_AWS",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "express-generator": "^4.16.1",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.19"
+  }
+}

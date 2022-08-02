@@ -8,13 +8,32 @@
 </head>
 <body>
     <h1>Index prueba web</h1>
-    <h1><?php echo "This message is from server side." ?></h1>
-    <?php
-    include("conexion.php");
+    <button id="boton">carga la prueba</button> 
+    <div id="response">
 
-    if(conexion){
-        echo "la conexion se ha realizado con exito";
-    }
-    ?>
+    </div>
+    <script>
+        function funcionscriptajax(){
+            const http = new XMLHttpRequest();
+            const url = 'conexion.js'
+
+            http.onreadystatechange = function(){
+                if (this.readyState == 4 && this.status == 200) {
+                    console.log(this.responseText);
+                    document.getElementById("response").innerHTML = this.responseText; 
+                } 
+            }
+
+            http.open("GET", url);
+            http.send();
+        }
+
+        document.getElementById("boton").addEventListener("click",function(){
+            funcionscriptajax();
+        });
+            
+        
+    </script>   
+    
 </body>
 </html>
