@@ -4,34 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
+    <title>Index ARWEB</title>
 </head>
 <body>
-    <h1>Index prueba web</h1>
-    <button id="boton">carga la prueba</button> 
-    <div id="response">
-
-    </div>
+    <h1>Ar Allbreaker</h1>
+    <h3>Pagina web donde puedes cargar tus modelos</h3>
+    <p>
+        Esta es una pagina index de prueba para subir los modelos 3d
+    </p>
+    <form action="/formulario_guardar_modelosAWS">
+        <input type="submit" value="formulario"/>
+    </form>
+    <br>
+    
     <script>
-        function funcionscriptajax(){
-            const http = new XMLHttpRequest();
-            const url = 'conexion.js'
-
-            http.onreadystatechange = function(){
-                if (this.readyState == 4 && this.status == 200) {
-                    console.log(this.responseText);
-                    document.getElementById("response").innerHTML = this.responseText; 
-                } 
-            }
-
-            http.open("GET", url);
-            http.send();
-        }
-
-        document.getElementById("boton").addEventListener("click",function(){
-            funcionscriptajax();
-        });
-            
         
     </script>   
     

@@ -1,10 +1,11 @@
 var mysql = require('mysql');
 
+
 var conexion = mysql.createConnection({
-host: 'POINT_OF_ACCESS',
-database: 'DATABASE',
-user: 'admin',
-password: 'CONTRA_POINT_OF_ACCESS'
+host: 'localhost',
+database: 'modelos_web',
+user: 'root',
+password: ''
 });
 
 conexion.connect(function(error){

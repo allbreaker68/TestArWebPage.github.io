@@ -1,11 +1,17 @@
-var http = require('http');
 
-var servidor = http.createServer(function(peticion, respuesta){
-  respuesta.writeHead(200, {'Content-type':'text/html;charset=utf-8'});
-  respuesta.write('<h3>Server de nodejs</h3>');
-  console.log('peticion web');
-  respuesta.end();
-})
+var express = require('express');
 
-servidor.listen(3000);
-console.log('Ejecuntando un server local con node.js');
+var app = express();
+
+app.get('/', (peticion,respuesta) => {
+  respuesta.sendFile(__dirname + '/index.html');
+});
+
+app.get('/formulario_guardar_modelosAWS', (peticion,respuesta) => {
+  respuesta.sendFile(__dirname + '/formulario_guardar_modelosAWS.html');
+});
+
+app.listen(3000,function(peticion,respuesta){
+
+  console.log("server funcionando");
+});
