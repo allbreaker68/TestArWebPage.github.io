@@ -2,10 +2,10 @@ var mysql = require('mysql');
 
 
 var conexion = mysql.createConnection({
-host: 'localhost',
-database: 'modelos_web',
-user: 'root',
-password: ''
+host: 'POINT_OF_ACCESS',
+database: 'DATABASE',
+user: 'admin',
+password: 'CONTRA_POINT_OF_ACCESS'
 });
 
 conexion.connect(function(error){
@@ -13,7 +13,12 @@ conexion.connect(function(error){
     throw error;
   }else{
     console.log('Conexion Exitosa');
+    respuesta.writeHead(500, { 'Content-Type': 'text/plain' })
+    respuesta.write('cargo exitosamente la DB')
+    respuesta.end()
   }
 });
 
 conexion.end();
+
+exports.prueba_conexion = conexion.connect;
