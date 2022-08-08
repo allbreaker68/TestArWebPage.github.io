@@ -1,4 +1,4 @@
-
+var AWS = require('aws-sdk');
 var express = require('express');
 
 var app = express();

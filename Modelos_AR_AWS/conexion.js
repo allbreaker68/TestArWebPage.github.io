@@ -1,11 +1,11 @@
 var mysql = require('mysql');
-
+var AWS = require('aws-sdk');
 
 var conexion = mysql.createConnection({
-host: 'POINT_OF_ACCESS',
-database: 'DATABASE',
+host: 'dbpruebasmodelwebar.ccnilygdxq9g.us-east-1.rds.amazonaws.com',
+database: 'modelos_web',
 user: 'admin',
-password: 'CONTRA_POINT_OF_ACCESS'
+password: '	data-modelweb'
 });
 
 conexion.connect(function(error){
