@@ -5,24 +5,25 @@ head {
 	text-align: center;
 	align-content: center;
 }
- model-viewer{
- 
-  	width: 100vw;
-  	height: 100vh;
-  	/* mobile viewport bug fix */
-    min-height: -webkit-fill-available;
-  	margin: 0 auto;
-  	position:fixed;
-  	--poster-color:#00000000;
 
-  }
-  section
-  {
-      position:fixed;
-  }
-  
+model-viewer {
+
+	width: 75vw;
+	height: 75vh;
+	/* mobile viewport bug fix */
+	min-height: -webkit-fill-available;
+	margin: 0 auto;
+	position: fixed;
+	--poster-color: #00000000;
+
+}
+
+section {
+	position: fixed;
+}
+
 body {
-	position:fixed;
+	position: fixed;
 	background-color: transparent;
 	text-decoration-color: black;
 	font-family: 'Raleway', sans-serif;
@@ -32,13 +33,15 @@ body {
 	overflow-x: hidden;
 	padding: 0px;
 }
-#default-ar-button{
+
+#default-ar-button {
 	position: absolute;
-	bottom: 16px;
+	bottom: 150px;
 	right: 16px;
-	transform: scale(var(--ar-button-scale,1));
+	transform: scale(var(--ar-button-scale, 1));
 	transform-origin: top-left;
 }
+
 h1,
 h2,
 h3,
@@ -87,54 +90,110 @@ textarea {
 	resize: none;
 }
 
+
+
 /*/////////////////////////////////////////////////////////////////////////////////*/
+
 /*estilos de las anotaciones*/
 button {
-    display: block;
-    width: 20px;
-    height: 20px;
-    border-radius: 10px;
-    border: none;
-    background-color: rgb(128, 7, 158);
-    box-sizing: border-box;
+	display: block;
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	border: none;
+	background-color: rgb(128, 7, 158);
+	box-sizing: border-box;
 }
 
+
+
 button[slot="hotspot-hand"] {
-    --min-hotspot-opacity: 0;
-    background-color: red;
+	--min-hotspot-opacity: 0;
+	background-color: red;
 }
 
 button[slot="hotspot-foot"]:not([data-visible]) {
-    background-color: transparent;
-    border: 3px solid blue;
+	background-color: transparent;
+	border: 3px solid blue;
 }
 
-.cross{
-    background-color: aqua;
+
+
+.cross {
+	background-color: aqua;
 }
 
 #annotation {
-    background-color: #888888;
-    position: absolute;
-    transform: translate(10px, 10px);
-    border-radius: 10px;
-    padding: 10px;
+	background-color: #888888;
+	position: absolute;
+	transform: translate(10px, 10px);
+	border-radius: 10px;
+	padding: 10px;
 }
 
-/* This keeps child nodes hidden while the element loads */
+
+
+/* This keeps child nodes hidden while the element loads 
 :not(:defined)>* {
-    display: none;
-}
+	display: none;
+}*/
 
-.dot {
+/*.dot {
+	display: block;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+	background: rgb(28, 172, 9);
+	--min-hotspot-opacity: 0.5;
+}*/
+.dot{
     display: block;
     width: 12px;
     height: 12px;
     border-radius: 50%;
+    border: none;
+    box-sizing: border-box;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-    background: rgb(28, 172, 9);
-    --min-hotspot-opacity: 0.5;
+    background: #fff;
+    pointer-events: none;
+    --min-hotspot-opacity: 0;
+  }
+
+/*///////////////////////////////////////////*/
+/*estilos del cambiar animaciones*/
+#controls {
+    position: absolute;
+	top: 50vw;
+    bottom: 16px;
+    left: 16px;
+    max-width: unset;
+    transform: unset;
+    pointer-events: auto;
 }
+
+.dim {
+	background: rgb(0, 0, 0);
+	border-radius: 4px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+	color: rgba(255, 255, 255, 0.8);
+	display: block;
+	font-family: Futura, Helvetica Neue, sans-serif;
+	font-size: 18px;
+	font-weight: 700;
+	max-width: 128px;
+	overflow-wrap: break-word;
+	padding: 0.5em 1em;
+	position: absolute;
+	top: 700px;
+	right: 0;
+	width: 128px;
+	height: 100px;
+	transform: translate3d(-50%, -50%, 0);
+	--min-hotspot-opacity: 0;
+}
+
+
 
 
 
