@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>&lt;model-viewer&gt; example</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="copy.css" type="text/css">
-    
-    <!-- The following libraries and polyfills are recommended to maximize browser support -->
-    <!-- NOTE: you must adjust the paths as appropriate for your project -->
-    
-    <!-- 💁 OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
-    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+<head>
+  <title>&lt;model-viewer&gt; example</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  </head> 
+  <link rel="stylesheet" href="copy.css" type="text/css">
+
+  <!-- The following libraries and polyfills are recommended to maximize browser support -->
+  <!-- NOTE: you must adjust the paths as appropriate for your project -->
+
+  <!-- 💁 OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+  <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+
+</head>
+
 <body>
   <div id="card">
     <!-- All you need to put beautiful, interactive 3D content on your site: -->
-    <model-viewer id="hotspot-demo"
-                  src="Anim_lenovo_01_0003.glb"
-                  ios-src="Anim_lenovo_01_0003(1).usdz"
-                  poster=""
-                  alt="A 3D model of an astronaut"
-                  shadow-intensity="1"
-                  camera-controls
-                  autoplay animation-name="Idle_Close"
-                  ar ar-mode="webxr"
-                  ar-scale="fixed">
+    <model-viewer id="hotspot-demo" 
+    src="Anim_lenovo_02.glb" 
+    ios-src="Anim_lenovo_01_0003(1).usdz" 
+    poster=""
+    alt="A 3D model of an astronaut" 
+    shadow-intensity="1" 
+    camera-controls 
+    autoplay animation-name="ActionB_Idle_Close"  ar
+    ar-mode="webxr" 
+    ar-scale="fixed"
+    camera-orbit="0deg 10deg 2m">
       <button class="hotspot" slot="hotspot-visor" data-position="-0.150 0 0" data-normal="0 0 1">
         <div id="annotation">usb</div>
       </button>
@@ -36,72 +39,110 @@
       </button>
       <div id="controls" class="dim">
         <label for="animationName">Cambiar animaciones</label>
-        <select id="selectanim">
-            <option disabled selected value> -- seleccionar -- </option>
-            <option value="Open_Screen">Abrir</option>
-            <option value="Close_Screen.001">Cerrar</option>
+        <!--<select id="selectanim">
+          <option disabled selected value> -- seleccionar -- </option>
+          <option value="Open_Screen">Abrir</option>
+          <option value="Close_Screen.001">Cerrar</option>
 
-        </select>
-    </div>
+        </select>-->
+
+        <label id="switch_label" class="switch">
+          <input type="checkbox" name="checkbox">
+          <span class="slider round"></span>
+        </label>
+
+      </div>
+
     </model-viewer>
-    
-    
+
+
   </div>
-  
-  
+
+
   <footer>
     <span>Modelo basico</span>
-    
-    
+
+
   </footer>
   <script>
 
     const modelViewer = document.querySelector('#hotspot-demo');
-
+    /*
     modelViewer.querySelector('#selectanim').addEventListener('input', (event) => {
-        modelViewer.animationName = event.target.value;
+      modelViewer.animationName = event.target.value;
 
-        /*self.setInterval(() => {
-            modelViewer.animationName = modelViewer.animationName === 'idle' ?
-                'Rotate' : 'idle';
-        }, 1500.0);*/
-        if (event.target.value == "Open_Screen") {
+      self.setInterval(() => {
+          modelViewer.animationName = modelViewer.animationName === 'idle' ?
+              'Rotate' : 'idle';
+      }, 1500.0);
+      if (event.target.value == "Open_Screen") {
 
-            setTimeout(() => {
-                console.log("1 Segundo esperado")
-                modelViewer.animationName = "Idle_Open_Screen";
-            }, 1000);
+        setTimeout(() => {
+          console.log("1 Segundo esperado")
+          modelViewer.animationName = "Idle_Open_Screen";
+        }, 1000);
 
-        } else if (event.target.value == "Close_Screen.001") {
+      } else if (event.target.value == "Close_Screen.001") {
 
-            setTimeout(() => {
-                console.log("20 Segundos esperado")
-                modelViewer.animationName = "Idle_Close";
-            }, 20000);
+        setTimeout(() => {
+          console.log("20 Segundos esperado")
+          modelViewer.animationName = "Idle_Close";
+        }, 20000);
 
-        }
-
-
-
-    })
+      }
 
 
 
-    var select = document.getElementById('selectanim');
+    })*/
+    
+    var checkbox = modelViewer.querySelector("input[name=checkbox]");
+
+    checkbox.addEventListener('change', function () {
+      if (this.checked) {
+        console.log("Checkbox is checked..");
+
+        setTimeout(() => {
+          console.log("idle open screen ");
+          modelViewer.animationName= "ActionB_idle_open_screen";
+          
+        }, 16500);
+
+        console.log("open screen anima");
+        modelViewer.animationName = "ActionB_Open_Screen";
+
+        
+
+      } else {
+        
+
+        setTimeout(() => {
+          console.log("17 Segundos esperado");
+          console.log("idle open screen ");
+          modelViewer.animationName = "ActionB_Idle_Close";
+        }, 17000);
+
+        modelViewer.animationName = "ActionB_Close_Screen";
+
+        console.log("Checkbox is not checked..");
+      }
+    });
+
+
+   /* var select = document.getElementById('selectanim');
     select.addEventListener('change',
-        function () {
-            var selectedOption = this.options[select.selectedIndex];
-            console.log(selectedOption.value + ': ' + selectedOption.text);
-        });
+      function () {
+        var selectedOption = this.options[select.selectedIndex];
+        console.log(selectedOption.value + ': ' + selectedOption.text);
+      });*/
 
-</script>
-  
-  
+  </script>
+
+
   <!-- 💁 Include both scripts below to support all browsers! -->
 
   <!-- Loads <model-viewer> for modern browsers: -->
-  <script type="module"
-      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
   </script>
 </body>
+
 </html>
