@@ -133,10 +133,10 @@ button[slot="hotspot-foot"]:not([data-visible]) {
 
 
 
-/* This keeps child nodes hidden while the element loads 
+This keeps child nodes hidden while the element loads 
 :not(:defined)>* {
 	display: none;
-}*/
+}
 
 /*.dot {
 	display: block;
@@ -164,7 +164,7 @@ button[slot="hotspot-foot"]:not([data-visible]) {
 /*estilos del cambiar animaciones*/
 #controls {
     position: absolute;
-	top: 50vw;
+	
     bottom: 16px;
     left: 16px;
     max-width: unset;

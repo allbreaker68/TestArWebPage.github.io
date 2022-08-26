@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="copy.css">
+    <link rel="stylesheet" href="copy.css" type="text/css">
     
     <!-- The following libraries and polyfills are recommended to maximize browser support -->
     <!-- NOTE: you must adjust the paths as appropriate for your project -->
@@ -18,36 +18,83 @@
 <body>
   <div id="card">
     <!-- All you need to put beautiful, interactive 3D content on your site: -->
-    <model-viewer src="Astronaut.glb"
-                  ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878"
-                  poster="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b%2Fposter-astronaut.png?v=1599079951717"
+    <model-viewer id="hotspot-demo"
+                  src="Anim_lenovo_01_0003.glb"
+                  ios-src="Anim_lenovo_01_0003(1).usdz"
+                  poster=""
                   alt="A 3D model of an astronaut"
                   shadow-intensity="1"
                   camera-controls
-                  auto-rotate ar>
-      <button class="hotspot" slot="hotspot-visor" data-position="0 1.75 0.35" data-normal="0 0 1"></button>
+                  autoplay animation-name="Idle_Close"
+                  ar ar-mode="webxr"
+                  ar-scale="fixed">
+      <button class="hotspot" slot="hotspot-visor" data-position="-0.150 0 0" data-normal="0 0 1">
+        <div id="annotation">usb</div>
+      </button>
+      <button class="hotspot" slot="hotspot-hand" data-position="0.150 0 -0.1" data-normal="0 0 1">
+        <div id="annotation">Puertos</div>
+      </button>
+      <div id="controls" class="dim">
+        <label for="animationName">Cambiar animaciones</label>
+        <select id="selectanim">
+            <option disabled selected value> -- seleccionar -- </option>
+            <option value="Open_Screen">Abrir</option>
+            <option value="Close_Screen.001">Cerrar</option>
+
+        </select>
+    </div>
     </model-viewer>
-    <section class="attribution">
-      <span>
-        <h1>Astronaut</h1>
-        <span>By <a href="https://poly.google.com/view/dLHpzNdygsg" target="_blank">Poly</a></span>
-      </span>
-      <a class="cc" href="https://creativecommons.org/licenses/by/2.0/" target="_blank">
-        <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg">
-        <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg">
-      </a>
-    </section>
+    
     
   </div>
   
   
   <footer>
-    <span>This page is a basic demo of the <a href="https://github.com/GoogleWebComponents/model-viewer" target="_blank">&lt;model-viewer&gt;</a> web component.</span>
-    <span>It makes displaying 3D and AR content on the web easy ✌️</span>
-    <a href="https://glitch.com/edit/#!/remix/model-viewer">
-      <img src="https://cdn.glitch.com/2bdfb3f8-05ef-4035-a06e-2043962a3a13%2Fremix%402x.png?1513093958726" alt="remix button" aria-label="remix" height="33">
-    </a>
+    <span>Modelo basico</span>
+    
+    
   </footer>
+  <script>
+
+    const modelViewer = document.querySelector('#hotspot-demo');
+
+    modelViewer.querySelector('#selectanim').addEventListener('input', (event) => {
+        modelViewer.animationName = event.target.value;
+
+        /*self.setInterval(() => {
+            modelViewer.animationName = modelViewer.animationName === 'idle' ?
+                'Rotate' : 'idle';
+        }, 1500.0);*/
+        if (event.target.value == "Open_Screen") {
+
+            setTimeout(() => {
+                console.log("1 Segundo esperado")
+                modelViewer.animationName = "Idle_Open_Screen";
+            }, 1000);
+
+        } else if (event.target.value == "Close_Screen.001") {
+
+            setTimeout(() => {
+                console.log("20 Segundos esperado")
+                modelViewer.animationName = "Idle_Close";
+            }, 20000);
+
+        }
+
+
+
+    })
+
+
+
+    var select = document.getElementById('selectanim');
+    select.addEventListener('change',
+        function () {
+            var selectedOption = this.options[select.selectedIndex];
+            console.log(selectedOption.value + ': ' + selectedOption.text);
+        });
+
+</script>
   
   
   <!-- 💁 Include both scripts below to support all browsers! -->
