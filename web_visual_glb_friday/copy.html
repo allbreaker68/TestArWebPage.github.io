@@ -14,7 +14,7 @@
 </head>
 
 <body>
-  <div id="card">
+  
     
     <model-viewer 
     id="hotspot-demo" 
@@ -24,15 +24,15 @@
     alt="A 3D model of an astronaut" 
     shadow-intensity="1" 
     camera-controls 
-    autoplay animation-name="ActionB_Idle_Close"  
+    autoplay animation-name="ActionB_Idle_Open_Screen"  
     ar
     ar-mode="webxr" 
     ar-scale="fixed"
     camera-orbit="-30deg 70deg 2m">
-      <button class="hotspot" slot="hotspot-power" data-position="-0.145 0 -0.04" data-normal="0 0 1">
+      <button  class="hotspot" slot="hotspot-power" data-position="-0.145 0 -0.04" data-normal="0 0 1">
         <div id="annotation">Puerto de Carga</div>
       </button>
-      <button class="hotspot" slot="hotspot-buttonpower" data-position="0.145 0 -0.02" data-normal="0 0 1">
+      <button  class="hotspot" slot="hotspot-buttonpower" data-position="0.145 0 -0.02" data-normal="0 0 1">
         <div id="annotation">Tunderbolt y Boton Encendido</div>
       </button>
       <div id="controls" class="dim">
@@ -54,7 +54,7 @@
     </model-viewer>
 
 
-  </div>
+  
 
 
   <footer>
@@ -66,33 +66,8 @@
 
     const modelViewer = document.querySelector('#hotspot-demo');
     const ocultarlabel = document.getElementById("switch_label");
-    /*
-    modelViewer.querySelector('#selectanim').addEventListener('input', (event) => {
-      modelViewer.animationName = event.target.value;
-
-      self.setInterval(() => {
-          modelViewer.animationName = modelViewer.animationName === 'idle' ?
-              'Rotate' : 'idle';
-      }, 1500.0);
-      if (event.target.value == "Open_Screen") {
-
-        setTimeout(() => {
-          console.log("1 Segundo esperado")
-          modelViewer.animationName = "Idle_Open_Screen";
-        }, 1000);
-
-      } else if (event.target.value == "Close_Screen.001") {
-
-        setTimeout(() => {
-          console.log("20 Segundos esperado")
-          modelViewer.animationName = "Idle_Close";
-        }, 20000);
-
-      }
-
-
-
-    })*/
+    const ocultar_botones = document.getElementsByClassName("hotspot");;
+    
     
     var checkbox = modelViewer.querySelector("input[name=checkbox]");
 
@@ -106,6 +81,9 @@
           modelViewer.animationName= "ActionB_Idle_Open_Screen";
           
           ocultarlabel.style.visibility = "visible";
+          
+          ocultar_botones[0].style.visibility = "visible";
+          ocultar_botones[1].style.visibility = "visible";
         }, 16500);
 
         console.log("open screen anima");
@@ -113,6 +91,8 @@
 
         ocultarlabel.style.visibility = "hidden";
         
+        ocultar_botones[0].style.visibility = "hidden";
+        ocultar_botones[1].style.visibility = "hidden";
 
       } else {
         console.log("Checkbox is not checked..");
@@ -122,6 +102,9 @@
           console.log("idle open screen ");
           modelViewer.animationName = "ActionB_Idle_Close";
           ocultarlabel.style.visibility = "visible";
+          
+          ocultar_botones[0].style.visibility = "visible";
+          ocultar_botones[1].style.visibility = "visible";
          
         }, 17000);
 
@@ -129,19 +112,15 @@
         modelViewer.animationName = "ActionB_Close_Screen";
 
         ocultarlabel.style.visibility = "hidden";
-       
+        
+        ocultar_botones[0].style.visibility = "hidden";
+        ocultar_botones[1].style.visibility = "hidden";
         
       }
     });
 
 
-   /* var select = document.getElementById('selectanim');
-    select.addEventListener('change',
-      function () {
-        var selectedOption = this.options[select.selectedIndex];
-        console.log(selectedOption.value + ': ' + selectedOption.text);
-      });*/
-
+  
   </script>
 
 
