@@ -9,45 +9,43 @@
 
   <link rel="stylesheet" href="copy.css" type="text/css">
 
-  <!-- The following libraries and polyfills are recommended to maximize browser support -->
-  <!-- NOTE: you must adjust the paths as appropriate for your project -->
-
-  <!-- 💁 OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
   <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
 
 </head>
 
 <body>
   <div id="card">
-    <!-- All you need to put beautiful, interactive 3D content on your site: -->
-    <model-viewer id="hotspot-demo" 
-    src="Anim_lenovo_02.glb" 
-    ios-src="Anim_lenovo_01_0003(1).usdz" 
-    poster=""
+    
+    <model-viewer 
+    id="hotspot-demo" 
+    src="Anim_lenovo_Final.glb" 
+    ios-src="Prueba_011.usdz" 
+    poster="PC_lenovo.png"
     alt="A 3D model of an astronaut" 
     shadow-intensity="1" 
     camera-controls 
-    autoplay animation-name="ActionB_Idle_Close"  ar
+    autoplay animation-name="ActionB_Idle_Close"  
+    ar
     ar-mode="webxr" 
     ar-scale="fixed"
-    camera-orbit="0deg 10deg 2m">
-      <button class="hotspot" slot="hotspot-visor" data-position="-0.150 0 0" data-normal="0 0 1">
-        <div id="annotation">usb</div>
+    camera-orbit="-30deg 70deg 2m">
+      <button class="hotspot" slot="hotspot-power" data-position="-0.145 0 -0.04" data-normal="0 0 1">
+        <div id="annotation">Puerto de Carga</div>
       </button>
-      <button class="hotspot" slot="hotspot-hand" data-position="0.150 0 -0.1" data-normal="0 0 1">
-        <div id="annotation">Puertos</div>
+      <button class="hotspot" slot="hotspot-buttonpower" data-position="0.145 0 -0.02" data-normal="0 0 1">
+        <div id="annotation">Tunderbolt y Boton Encendido</div>
       </button>
       <div id="controls" class="dim">
-        <label for="animationName">Cambiar animaciones</label>
+        <label for="animationName">Abrir/Cerrar</label>
         <!--<select id="selectanim">
           <option disabled selected value> -- seleccionar -- </option>
           <option value="Open_Screen">Abrir</option>
           <option value="Close_Screen.001">Cerrar</option>
 
         </select>-->
-
+        <br><br>
         <label id="switch_label" class="switch">
-          <input type="checkbox" name="checkbox">
+          <input id="chequeando" type="checkbox" name="checkbox">
           <span class="slider round"></span>
         </label>
 
@@ -60,13 +58,14 @@
 
 
   <footer>
-    <span>Modelo basico</span>
+    <span>Modelo Lenovo</span>
 
 
   </footer>
   <script>
 
     const modelViewer = document.querySelector('#hotspot-demo');
+    const ocultarlabel = document.getElementById("switch_label");
     /*
     modelViewer.querySelector('#selectanim').addEventListener('input', (event) => {
       modelViewer.animationName = event.target.value;
@@ -103,27 +102,35 @@
 
         setTimeout(() => {
           console.log("idle open screen ");
-          modelViewer.animationName= "ActionB_idle_open_screen";
+
+          modelViewer.animationName= "ActionB_Idle_Open_Screen";
           
+          ocultarlabel.style.visibility = "visible";
         }, 16500);
 
         console.log("open screen anima");
         modelViewer.animationName = "ActionB_Open_Screen";
 
+        ocultarlabel.style.visibility = "hidden";
         
 
       } else {
-        
+        console.log("Checkbox is not checked..");
 
         setTimeout(() => {
           console.log("17 Segundos esperado");
           console.log("idle open screen ");
           modelViewer.animationName = "ActionB_Idle_Close";
+          ocultarlabel.style.visibility = "visible";
+         
         }, 17000);
 
+        console.log("close screen anima");
         modelViewer.animationName = "ActionB_Close_Screen";
 
-        console.log("Checkbox is not checked..");
+        ocultarlabel.style.visibility = "hidden";
+       
+        
       }
     });
 
