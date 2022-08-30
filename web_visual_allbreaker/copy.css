@@ -46,11 +46,11 @@ body {
 
 
 model-viewer {
-  width: 75vw;
-  height: 75vh;
+  width: 100vw;
+  height: 100vh;
   /* mobile viewport bug fix */
   min-height: -webkit-fill-available;
-  margin: 0 auto;
+  margin: 0 ;
   position: fixed;
   --poster-color: #00000000;
 }
@@ -223,14 +223,19 @@ input:checked+.slider:before {
 }
 
 /*///////////////////////////////////////////////*/
-/*    boton final */
+/*   boton final */
 .boton_visualizar {
-  background-color: transparent; /* Green */
+  position:relative;
+  
+  background-color: transparent; 
   border: none;
   color: white;
-  padding: 4px 5px;
+  display: inline-block;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+  padding: 0 0 ;
   font-size: 16px;
+  margin: 0 ;
+
 }
+
