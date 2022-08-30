@@ -92,7 +92,7 @@ footer {
   height: 20px;
   border-radius: 10px;
   border: none;
-  background-color: blue;
+  background-color: rgb(255, 0, 0);
   box-sizing: border-box;
   pointer-events: none;
 }
