@@ -1,2 +1,0 @@
-# htaccess
-Aplicación AddType / x-httpd-php .php .htm .html AddHandler x-httpd-php .php .htm .html
