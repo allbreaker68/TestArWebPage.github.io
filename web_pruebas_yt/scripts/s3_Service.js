@@ -9,8 +9,8 @@ dotenv.config()
 function createS3Instance() {
   const s3 = new AWS.S3({
     credentials: {
-      accessKeyId: AWS.config.credentials.accessKeyId,
-      secretAccessKey: AWS.config.credentials.secretAccessKey
+      accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+      secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
 
     },
     region: 'us-east-1'
