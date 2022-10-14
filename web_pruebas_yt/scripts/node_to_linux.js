@@ -18,7 +18,7 @@ function execute_commands() {
     const vars_env = ['POINT_OF_ACCESS','USER','PASS']; 
     for (let index = 0; index < vars_env.length; index++) {
         console.log(vars_env[index]);
-        console.log('echo'+vars_env[index])
+        console.log('echo $'+vars_env[index])
     }
 }
 
