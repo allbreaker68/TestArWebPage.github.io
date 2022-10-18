@@ -1,18 +1,24 @@
 import mysql from 'mysql';
 import * as dotenv from 'dotenv';
 dotenv.config();
-
+import * as vars_env from './node_to_linux.js'
 
 
 var conexion = mysql.createConnection({
-host: process.env.POINT_OF_ACCESS,
+host: vars_env.vars_to_node[0],
 database: 'modelos_web',
-user: process.env.USER,
-password: process.env.PASS
+user: vars_env.vars_to_node[1],
+password: vars_env.vars_to_node[2]
 });
+/*
+var conexion = mysql.createConnection({
+  host: "localhost",
+  database: 'modelos_web',
+  user: "root",
+  password: ''
+});*/
 
-
-let conectando = conexion.connect(function(error){
+let conectando = conexion.connect( async function(error){
   if (error) {
     throw error;
   }else{

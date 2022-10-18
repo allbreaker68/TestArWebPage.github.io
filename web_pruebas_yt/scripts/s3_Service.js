@@ -1,16 +1,20 @@
 import AWS from 'aws-sdk';
 import fs from 'fs';
-
+import * as vars_env from './node_to_linux.js'
 import dotenv from 'dotenv';
 dotenv.config()
 
+/* 
+accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
+*/
 
 //accedemos con credenciales de s3
 function createS3Instance() {
   const s3 = new AWS.S3({
     credentials: {
-      accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-      secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
+      accessKeyId: vars_env.vars_to_node[4],
+      secretAccessKey: vars_env.vars_to_node[3]
 
     },
     region: 'us-east-1'
@@ -39,9 +43,9 @@ function deleting_object(key) {
   const s3 = createS3Instance();
   var params = { Bucket: 'web.ar.allbreaker', Key: key };
   s3.deleteObject(params, function (err, data) {
-    if (err){
+    if (err) {
       console.log(err, err.stack);  // error
-    } 
+    }
     else {
       console.log();
     }                 // deleted
