@@ -18,6 +18,8 @@ import * as actualizar_modelos from './router/update_and_remove.js';
 import * as mails_registered from './router/load_mails.js';
 import * as select_ar_web from './router/select_ar_web.js';
 
+
+
 //direcionamientos a las web que se va a mostrar
 app.get('/', (req, res) => {
   res.render('index')
