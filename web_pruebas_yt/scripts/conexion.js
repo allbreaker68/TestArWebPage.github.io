@@ -7,9 +7,9 @@ var conexion = mysql.createConnection({
   host: process.env.POINT_OF_ACCESS,
   database: process.env.DB,
   user: process.env.USERDB,
-  password: ''
+  password: process.env.PASS
 });
-//process.env.PASS
+//
 
 let conectando = conexion.connect( function (error) {
   if (error) {
