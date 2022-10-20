@@ -1,6 +1,5 @@
 import AWS from 'aws-sdk';
 import fs from 'fs';
-import * as vars_env from './node_to_linux.js'
 import dotenv from 'dotenv';
 dotenv.config()
 
