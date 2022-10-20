@@ -13,8 +13,8 @@ secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
 function createS3Instance() {
   const s3 = new AWS.S3({
     credentials: {
-      accessKeyId: vars_env.vars_to_node[4],
-      secretAccessKey: vars_env.vars_to_node[3]
+      accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+      secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
 
     },
     region: 'us-east-1'
