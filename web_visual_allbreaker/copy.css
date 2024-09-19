@@ -46,8 +46,8 @@ body {
 
 
 model-viewer {
-  width: 100vw;
-  height: 100vh;
+  width: 95vw;
+  height: 95vh;
   /* mobile viewport bug fix */
   min-height: -webkit-fill-available;
   margin: 0 ;
