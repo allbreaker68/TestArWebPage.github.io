@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="index.css">
+<!-- Import the component -->
+<meta charset="UFT-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+
+
+<!--<center>AR Test Page</center>-->
+</head>
+
+   <body>
+<script language="JavaScript" Type="text/javascript">
+<!--
+window.addEventListener('contextmenu', function (e) {
+  
+  e.preventDefault();
+}, false);
+//-->
+</script>
+   	<section>
+   
+
+  <model-viewer id="Bucket-Demo"  src="Assets/Handy_Paint_Pail_anim/GLB/RIG_Handy_Paint_Pail_Animation.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" autoplay animation-name="Animacion_01" >
+    <button class="Hotspot" id="HSpot" slot="hotspot-1" data-surface="1 0 2947 2907 2908 0.776 0.002 0.222" data-visibility-attribute="visible" style.visibility = "hidden">
+        <div class="HotspotAnnotation" style.visibility = "hidden">Liners
+        </div>
+    </button><button class="Hotspot" id="HSpot" id="Bucket-Demo" slot="hotspot-2" data-surface="0 0 11705 6926 6927 0.275 0.669 0.056" data-visibility-attribute="visible" style.visibility = "hidden">
+        <div class="HotspotAnnotation" style.visibility = "hidden">Handle
+        </div>
+    </button><button class="HotspotVis" id="HSpot" slot="hotspot-14" data-surface="0 1 5352 5914 5912 0.219 0.717 0.064" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Bucket</div>
+    </button><button class="Hotspot" id="HSpot" slot="hotspot-4" data-surface="1 0 2306 2223 2240 0.749 0.275 0.076" data-visibility-attribute="visible" style.visibility = "hidden">
+        <div class="HotspotAnnotation" >Brush
+        </div>
+    </button>
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+        View in your space
+    </button>
+    <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+    </div>
+   <!-- <button class="PlayAnim" class="boton_visualizar" name="boton_visualizar" onclick="toggle_Anim()">StartAnimation</button>-->
+</model-viewer>
+  <script>
+
+    const modelViewer = document.querySelector('#Bucket-Demo');
+    //const HotSpots = document.getElementById("HSpot");
+    const HotSpots = document.getElementsByClassName("Hotspot");
+    // initialize Default Behaiviour
+    for (let Spot of HotSpots) {
+        Spot.style.visibility = "hidden"
+    }
+    modelViewer.addEventListener("click", toggle_Anim);
+   // const ocultar_botones = document.getElementsByClassName("PlayAnim");;
+    
+   function toggle_Anim() {
+   
+        console.log("Button Clicked.");
+
+        setTimeout(() => {
+          console.log("Start Animation");
+        //  for (let button of ocultar_botones) 
+        //  {
+        //    button.style.visibility = "hidden"
+        //  }
+          modelViewer.animationName= "Animacion_03";
+        }, 6100);
+
+        console.log("open screen anima");
+        modelViewer.animationName = "Animacion_02";
+        
+        setTimeout(() => {
+          console.log("Show Hotspots ");
+          for (let Spot of HotSpots) 
+          {
+             Spot.style.visibility = "visible"
+          }
+        }, 7000);
+        modelViewer.removeEventListener("click", toggle_Anim);
+        //console.log(HotSpots.constructor.name);
+        //HotSpots
+      
+   }
+
+  </script>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+  </script>
+</section>
+
+  
+   
+   </body>
