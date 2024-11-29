@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<krpano>
+
+<!-- ************************ -->
+<!--         Messages         -->
+<!-- ************************ -->
+
+  <data name="en_project_title"><![CDATA[Hollieburton Base Yopal]]></data>
+  <data name="en_project_author_name"><![CDATA[Desarrollado por Allbreaker Colombia]]></data>
+  <data name="en_project_author_url"><![CDATA[http://www.allbreaker.co]]></data>
+
+
+
+  <data name="en_pano374_title"><![CDATA[Aqui estoy]]></data>
+
+
+  <data name="en_pano107_title"><![CDATA[62]]></data>
+
+
+  <data name="en_pano376_title"><![CDATA[59]]></data>
+
+
+  <data name="en_pano109_title"><![CDATA[Adelante]]></data>
+
+
+  <data name="en_pano111_title"><![CDATA[64]]></data>
+
+
+  <data name="en_pano113_title"><![CDATA[65]]></data>
+
+
+  <data name="en_pano117_title"><![CDATA[67]]></data>
+
+
+  <data name="en_pano119_title"><![CDATA[68]]></data>
+
+  <data name="en_panogroup385_title"><![CDATA[Artificial Lift]]></data>
+
+  <data name="en_pano383_title"><![CDATA[95]]></data>
+  <data name="en_pano382_title"><![CDATA[94]]></data>
+  <data name="en_pano380_title"><![CDATA[92]]></data>
+  <data name="en_pano378_title"><![CDATA[90]]></data>
+  <data name="en_pano379_title"><![CDATA[91]]></data>
+  <data name="en_pano384_title"><![CDATA[96]]></data>
+
+  <data name="en_panogroup122_title"><![CDATA[Bodega]]></data>
+
+  <data name="en_pano121_title"><![CDATA[Bodega]]></data>
+
+  <data name="en_panogroup142_title"><![CDATA[Jardín Oficinas]]></data>
+
+  <data name="en_pano141_title"><![CDATA[85]]></data>
+  <data name="en_spotpoint340_tooltip"><![CDATA[Salida anillo vial]]></data>
+  <data name="en_spotpoint341_tooltip"><![CDATA[Salida anillo vial]]></data>
+  <data name="en_spotpoint811_tooltip"><![CDATA[Salida anillo vial]]></data>
+  <data name="en_spotpoint812_tooltip"><![CDATA[Salida anillo vial]]></data>
+
+
+  <data name="en_pano123_title"><![CDATA[72]]></data>
+
+
+  <data name="en_pano125_title"><![CDATA[74]]></data>
+
+
+  <data name="en_pano127_title"><![CDATA[76]]></data>
+
+
+  <data name="en_pano129_title"><![CDATA[77]]></data>
+
+
+  <data name="en_pano131_title"><![CDATA[78]]></data>
+
+
+  <data name="en_pano135_title"><![CDATA[82]]></data>
+
+
+  <data name="en_pano137_title"><![CDATA[83]]></data>
+
+
+  <data name="en_pano139_title"><![CDATA[84]]></data>
+
+
+  <data name="en_pano133_title"><![CDATA[79]]></data>
+
+
+
+
+
+
+  <data name="en_controlBar_dpadmoveLeftTip"><![CDATA[Move left]]></data>
+  <data name="en_controlBar_dpadmoveRightTip"><![CDATA[Move right]]></data>
+  <data name="en_controlBar_dpadmoveUpTip"><![CDATA[Move up]]></data>
+  <data name="en_controlBar_dpadmoveDownTip"><![CDATA[Move down]]></data>
+  <data name="en_controlBar_dpadopenFsTip"><![CDATA[Enter fullscreen]]></data>
+  <data name="en_controlBar_dpadcloseFsTip"><![CDATA[Exit fullscreen]]></data>
+  <data name="en_controlBar_dpadautorotateOnTip"><![CDATA[Start autorotation]]></data>
+  <data name="en_controlBar_dpadautorotateOffTip"><![CDATA[Stop autorotation]]></data>
+  <data name="en_controlBar_dpadautotourOnTip"><![CDATA[Start automatic tour]]></data>
+  <data name="en_controlBar_dpadautotourOffTip"><![CDATA[Stop automatic tour]]></data>
+  <data name="en_controlBar_dpadshowThumbnailsTip"><![CDATA[Show direct access]]></data>
+  <data name="en_controlBar_dpadhideThumbnailsTip"><![CDATA[Hide direct access]]></data>
+  <data name="en_controlBar_dpadgyroOnTip"><![CDATA[Enable gyroscope]]></data>
+  <data name="en_controlBar_dpadgyroOffTip"><![CDATA[Disable gyroscope]]></data>
+  <data name="en_controlBar_dpadgyroNotTip"><![CDATA[Gyroscope is unavailable]]></data>
+  <data name="en_controlBar_dpaddisplayControlsTip"><![CDATA[Show controls]]></data>
+  <data name="en_controlBar_dpadhideControlsTip"><![CDATA[Hide controls]]></data>
+  <data name="en_contextmenuopenFsLabel"><![CDATA[Enter Fullscreen]]></data>
+  <data name="en_contextmenucloseFsLabel"><![CDATA[Exit Fullscreen]]></data>
+  <data name="en_cool_hotspotcoolhotspotstyle_name"><![CDATA[Text]]></data>
+  <data name="en_cool_hotspot1coolhotspotstyle_name"><![CDATA[Lupa]]></data>
+  <data name="en_logo1websiteurl"><![CDATA[http://www.halliburton.com/en-US/locations/south/halliburton-south-central-america.page]]></data>
+  <data name="en_logo1tooltipText"><![CDATA[www.Halliburton.com]]></data>
+  <data name="en_cool_hotspot3coolhotspotstyle_name"><![CDATA[bomba]]></data>
+
+
+  <data name="en_vr_setup_hmd0"><![CDATA[SELECT YOUR HMD]]></data>
+  <data name="en_vr_setup_advanced"><![CDATA[ADVANCED SETTINGS]]></data>
+  <data name="en_vr_setup_title"><![CDATA[WEB VR SETTINGS]]></data>
+  <data name="en_vr_setup_dvn1"><![CDATA[Device:]]></data>
+  <data name="en_vr_setup_siz1"><![CDATA[Screen size:]]></data>
+  <data name="en_vr_setup_ipd1"><![CDATA[IPD:]]></data>
+  <data name="en_vr_setup_hmd1"><![CDATA[HMD:]]></data>
+  <data name="en_vr_setup_hmd3"><![CDATA[Customize]]></data>
+  <data name="en_vr_setup_cal"><![CDATA[Calibrate gyroscope]]></data>
+  <data name="en_vr_setup_sav"><![CDATA[SAVE]]></data>
+  <data name="en_vr_setup_rst"><![CDATA[RESET]]></data>
+  <data name="en_vr_setup_simple"><![CDATA[SIMPLE]]></data>
+  <data name="en_vr_setup_cls"><![CDATA[CLOSE]]></data>
+  <data name="en_vr_setup_m31"><![CDATA[HMD SETTINGS]]></data>
+  <data name="en_vr_setup_fov1"><![CDATA[FOV:]]></data>
+  <data name="en_vr_setup_dst1"><![CDATA[Distortion:]]></data>
+  <data name="en_vr_setup_d2tx"><![CDATA[Distortion 2:]]></data>
+  <data name="en_vr_setup_vig1"><![CDATA[Vignette:]]></data>
+  <data name="en_vr_setup_cac1"><![CDATA[Chromatic aberration:]]></data>
+  <data name="en_vr_setup_olp1"><![CDATA[Overlap:]]></data>
+  <data name="en_vr_setup_m35"><![CDATA[RETURN]]></data>
+  <data name="en_vr_setup_cb1"><![CDATA[GYROSCOPE]]></data>
+  <data name="en_vr_setup_cb2"><![CDATA[Place the device on a flat and[br]stable surface and tab CALIBRATE[br]to correct a gyroscope drifting.]]></data>
+  <data name="en_vr_setup_cb3"><![CDATA[CALIBRATE]]></data>
+  <data name="en_vr_setup_cb4"><![CDATA[RESET]]></data>
+  <data name="en_vr_setup_cb5"><![CDATA[RETURN]]></data>
+  <data name="en_vr_setup_cb6"><![CDATA[Calibrating...]]></data>
+  <data name="en_vr_setup_cb7"><![CDATA[Successful calibration]]></data>
+  <data name="en_vr_setup_cb8"><![CDATA[Calibration failed]]></data>
+  <data name="en_vr_setup_unavailable"><![CDATA[VR mode[br]is unavailable on your device]]></data>
+
+
+  <data name="en_project_description"><![CDATA[<font face="verdana, sans-serif">Recorrido Virtual por la Base Yopal de <font color="#cc0000">HALLIBURTON. </font>Felices 75 años en Colombia!</font>]]></data>
+
+
+
+
+
+
+  <data name="en_spotpoint146_description"><![CDATA[INICIO]]></data>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <data name="en_pano121_description"><![CDATA[Bodega de suministros Haliburton Base Yopal]]></data>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</krpano>
